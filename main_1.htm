@@ -43,20 +43,61 @@
 	</tr>
 
 </table>
-<form method="get" action="abc.asp">
+<form method="get" action="index.asp">
 acconut:<input type="text" name="user_name">
-password:<input type="text" name="password">
+password:<input type="password" name="password">
 <input type="submit" value="SENT">
 <input type="reset" value="重置">
+<select size="2" name="vivigable">
+		<option>香瓜茄</option>
+		<option>茄子</option>
+		<option>辣椒</option>
+		<option>番茄</option>
+		<option>番茄</option>
+</select>
+	
+<input list="country" />
+	<datalist id="country">
+		<option>chrome</option>
+		<option>grass</option>
+		<option>google</option>
+		<option>firefox</option>	
+	</datalist>
+
 </form>
 <br />
-<form method="post" action="">
+<form method="post" action="index.asp">
+	<input type="radio" name="gender" value="男" checked/>男生
+	<input type="radio" name="gender" value="女" />女生
+</form>
+<br />
+<form method="post" action="index.asp">
+	<input type="radio" name="gender" value="男" />男生
+	<input type="radio" name="gender" value="女" />女生
+</form>
+
+<br />
+<form method="post" action="mailto:king198785@yahoo.com.hk?subject=A~~~~~~" enctype="text/plain">
 Email acconut:<input type="text" name="user_name">
-Email password:<input type="text" name="password">
+Email password:<input type="password" name="password">
 <input type="submit" value="SENT">
 <input type="reset" value="重置">
 </form>
+<form method="post	" action="index_2.asp">
+<textarea rows="2" name="s1" cols="20"></textarea>
+<br />日期<input type="date" name="password" />
+<br />search<input type="search" name="search" />
+<br />color<input type="color" name="color"/>
+<br />range: 0<input type="range" min="1" max="100000" value="50000" name="range">
+<br /><output name="x" for="a b">DDD</output>
+<br /><input type="number" step="3" min="-10" max="49">
 
+</form>
+<form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
+      <input name="a" type="number" step="any"> +
+      <input name="b" type="number" step="any"> =
+      <output name="o"></output>
+    </form>
 
 </body>
 </html>
