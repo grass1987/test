@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>test for funtion</title>
+<script type="text/javascript">
+function onLoad()
+{
+	input_name.style.display='none';
+		if(typeof(Storage)=="undefined")
+		{
+			alert("sorry,你的BROWERS不支援");
+		}else
+		{
+			if(localStorage.username)
+			{
+				if(!localStorage.totle_login)
+				{
+					localStorage.totle_login=1;
+				}
+				else
+				{
+					localStorage.totle_login++;
+				}
+				log_in.style.display='none';
+				show_localstorage.innerHTML=localStorage.username + " 你好,這是你第 " +localStorage.totle_login +" 登入";
+	
+			}
+			log_in.addEventListener("click",input_each_name);
+			log_out.addEventListener("click",delete_record);
+			sent_name.addEventListener("click",record_name);
+		}
+		
+}
+function input_each_name()
+{
+	input_name.style.display="";
+	log_in.style.display="none";
+	
+}
+function delete_record()
+{
+	localStorage.totle_login=1;
+	show_localstorage.style.display='none';
+	log_in.style.display="";
+	localStorage.clear();
+}
+function record_name()
+{
+	localStorage.username=	inputname.value;
+	input_name.style.display='none';
+	location.reload();
+	
+}
+
+
+</script>
+
+</head>
+
+<body>
+<body onload="onLoad()">
+
+	<button id="log_in">登入</button>
+	<button id="log_out">登出</button>
+	<br />
+	<img src="photo.jpg" width="500">
+<span id="input_name">輸入姓名: <input type="text" id="inputname" value=""+localStorage.username><button id="sent_name" >送出</button></span>
+<br /><div id="show_localstorage"></div><br />
+</body>
+
+</body>
+</html>
