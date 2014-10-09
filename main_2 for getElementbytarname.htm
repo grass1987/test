@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript">
+function load()
+{
+	mark_record.addEventListener("click",function_mark_record);
+}
+function function_mark_record()
+{
+	var checkBoxList=document.getElementsByTagName('input');
+	for(i in checkBoxList)
+	{		
+		alert(i);
+		
+	}
+	
+		
+
+}
+
+</script> 
+</head>
+<body onload="load()">
+<button id="mark_record">完成</button>
+
+
+</body>
+</html>
